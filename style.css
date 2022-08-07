@@ -3,24 +3,78 @@
     margin: 0;
     font-family: "josefin", sans-serif;
     box-sizing: border-box;
-
+    text-decoration: none;
 }
+
 
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url(imagens.html/imagem4.png);
+    background-image: url(imagens.html/Captura\ de\ Tela\ 2022-08-05\ às\ 00.58.34.png);
     background-size: cover;
     background-position: center;
+
 }
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding-top: 45px;
     padding-left: 8%;
     padding-right: 8%;
+
+}
+
+.nav-list {
+
+    list-style: none;
+    display: flex;
+
+}
+
+
+.nav-list li {
+
+    margin-left: 32px;
+
+}
+
+.btn a {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+.btn a:hover {
+    background-color: transparent;
+    border: 2px solid rgb(248, 20, 20);
+    cursor: pointer;
+    color: white;
+
+
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+
+}
+
+/* mobile-menu = botão menu */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+
 }
 
 .logo {
@@ -28,6 +82,8 @@ nav {
     font-size: 35px;
     letter-spacing: 1px;
     cursor: pointer;
+
+
 }
 
 span {
@@ -100,6 +156,7 @@ h5 {
     width: 100%;
     padding: 100px 0px;
     background-color: #191919;
+
 }
 
 
@@ -107,10 +164,13 @@ h5 {
 .about img {
     height: auto;
     width: 430px;
+    margin-left: 20px;
 }
 
 .about-text {
     width: 550px;
+    margin-left: 40px;
+
 }
 
 .main {
@@ -121,7 +181,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-
+    font-size: 100%;
 }
 
 .about-text h2 {
@@ -169,15 +229,18 @@ button:hover {
     background: #101010;
     width: 100%;
     padding: 100px;
+
 }
+
 
 .title h2 {
     color: white;
     font-size: 75px;
-    width: 1130px;
     margin: 30px auto;
     text-align: center;
 }
+
+
 
 .box {
     display: flex;
@@ -217,7 +280,7 @@ button:hover {
     transition: .4s;
 }
 
-.card .button:houve {
+.card .button:hover {
     background-color: transparent;
     border: 2px solid rgb(248, 20, 20);
     cursor: pointer;
@@ -227,6 +290,7 @@ nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 10px 25px;
+    margin-top: 2vh;
 }
 
 nav ul li a {
@@ -234,6 +298,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
+    font-size: 23px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -242,20 +309,21 @@ nav ul li a:hover {
     transition: .4s;
 }
 
-.btn {
-    background-color: rgb(248, 20, 20);
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 30px;
-    transition: transform .4s;
-}
+/*
+     .btn { 
+         background-color:  rgb(248, 20, 20);
+         color: white;
+         text-decoration: none;
+         border: 2px solid transparent;
+         font-weight: bold;
+         padding: 10px 25px;
+         border-radius: 30px;
+         transition: transform .4s;
+        }
 
-.btn:hover {
-    transform: scale(1.2);
-}
+        .btn:hover {
+            transform: scale(1.2);
+        }*/
 
 .content {
     position: absolute;
@@ -358,4 +426,73 @@ footer p:nth-child(2) {
     color: rgb(255, 0, 0);
     bottom: 35px;
     font-size: 14px;
+}
+
+@media (max-width: 999px) {
+    html {
+        background: rgb(0, 0, 8);
+        background-repeat: no-repeat;
+
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* menu */
+    .nav-list {
+        position: absolute;
+        top: 10vh;
+        right: 0%;
+        width: 30vw;
+        height: 90vh;
+        background: #191919ac;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100vh);
+        transition: trasform 0.3s ease-in;
+
+    }
+
+    .nav-list li {
+        margin-left: 0%;
+        opacity: 10;
+        list-style: none;
+
+
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: 50px;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
 }

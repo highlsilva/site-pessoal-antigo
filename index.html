@@ -7,7 +7,7 @@
     <title>portifólio website</title>
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="arquivo.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -17,28 +17,36 @@
  <!--
 <img class="img-perfil" src="imagens.html/IMG_20220716_124919_810.jpg" alt=""><h1 class="nome">
    --> 
+  
 <div class="hero">
-    <nav>
+    <nav>  
         <h2 class="logo">Portfo<span>lio</span></h2>
-        <ul>
-            <li><a href="#">Home</a></li>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+       
+        <ul class="nav-list">
+            <li><a  href="#">Home</a></li>
             <li><a href="#">sobre mim</a></li>
             <li><a href="#">progetos</a></li>
             <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Contate-nos</a></li>
+            <li class="btn"><a href="#">Contate-nos</a></li>
         </ul>
-        <a href="#" class="btn">Subscribe</a>
+      <!--  <a href="#" class="btn">Subscribe</a>-->
     </nav>
+    <script src="Mobile-navbar.js"> </script>
 
     <div class="content">
         <h4>Olá meu nome é</h4>
-        <h1>Lucas de <span>silva </span></h1>
+        <h1>Lucas da <span>silva </span></h1>
         <h3>Eu sou um desenvolvedor web.</h3>
         <div class="newslatter">
-            <form>
+        <!--  <form>
                 <input type="email" name="email" id="mail" placeholder="Digite seu e-mail">
                 <input type="submit" name="submit" value="enviar">
-            </form>
+            </form>-->
         </div>
     </div>
 </div>
@@ -46,7 +54,7 @@
 <!----About section start---->
 <section class="about">
     <div class="main">
-        <img class="imagem-rodape" src="imagens.html/IMG_20220716_124919_810.jpg">
+        <img src="imagens.html/IMG_20220716_124919_810.jpg">
         <div class="about-text">
             <h2>Sobre mim</h2>
             <h5>Desenvolvedor <span>& Designer</span></h5>
@@ -89,7 +97,7 @@
 
         <div class="card">
             <i class="far fa-bell"></i>
-            <h5>Web Development</h5>
+            <h5>Desenvolvimento web</h5>
             <div class="pra">
                 <p>Todo site deve ser construído com dois objetivos principais: primeiro, ele precisa funcionar em todos os dispositivos. Em segundo lugar, precisa ser o mais rápido possível.</p>
 
@@ -119,19 +127,6 @@
     <p class="end">CopyRight por Lucas silva</p>
 </footer>
 
- <!--
-<p>hilucassilva.contact@gmail.com</p>
-<p>Competências</p>
-
-
-<p>WR</p>
-<p>IMC</p>
-<ul>
-    <li>M.R Tatuagem</li>
-    <li>Calculadora IMC</li>
-</ul>
-
-  -->
     
 </body>
 </html>

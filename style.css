@@ -5,7 +5,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+html {
+    width: 86rem;
+}
 
 .hero {
     height: 100vh;
@@ -16,13 +18,14 @@
 
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 6%;
+    padding-right: 4%;
 
 }
 
@@ -49,6 +52,7 @@ nav {
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
+    font-size: 13px;
 
 }
 
@@ -163,13 +167,13 @@ h5 {
 
 .about img {
     height: auto;
-    width: 430px;
-    margin-left: 20px;
+    width: 450px;
+    margin-left: 10px;
 }
 
 .about-text {
     width: 550px;
-    margin-left: 40px;
+    margin-left: 30px;
 
 }
 
@@ -183,6 +187,7 @@ h5 {
     justify-content: space-around;
     font-size: 100%;
 }
+ 
 
 .about-text h2 {
     color: white;
@@ -291,6 +296,7 @@ nav ul li {
     display: inline-block;
     padding: 10px 25px;
     margin-top: 2vh;
+    
 }
 
 nav ul li a {
@@ -428,7 +434,7 @@ footer p:nth-child(2) {
     font-size: 14px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 600px) {
     html {
         background: rgb(0, 0, 8);
         background-repeat: no-repeat;
@@ -444,15 +450,15 @@ footer p:nth-child(2) {
         position: absolute;
         top: 10vh;
         right: 0%;
-        width: 30vw;
+        width: 50vw;
         height: 90vh;
-        background: #191919ac;
+        background: #191919b0;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         transform: translateX(100vh);
         transition: trasform 0.3s ease-in;
-
+        
     }
 
     .nav-list li {

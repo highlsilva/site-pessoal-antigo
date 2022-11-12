@@ -1,6 +1,6 @@
 
-  
-  
+
+
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -14,7 +14,7 @@ class MobileNavbar {
     this.navLinks.forEach((link, index) => {
       link.style.animation
         ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${ index / 7 + 0.3
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
           }s`);
     });
   }
@@ -43,48 +43,12 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
-/*
-(function() {
-  var updateButton = document.getElementById('btn');
-  var cancelButton = document.getElementById('times');
- // var favDialog = document.getElementById('favDialog');
 
-  // O botão Update abre uma Dialog
-  updateButton.addEventListener('click', function() {
-    favDialog.show( "display: flex");
-   
-  });
+const toggle = () => dialog.classList.toggle("animar");
 
-  // O botão cancelButtom fecha uma Dialog
-  cancelButton.addEventListener('click', function() {
-    favDialog.close(" display: none;");
-  });
-})();
+btn.addEventListener("click", () => {
+  toggle();
+  times.addEventListener("click", toggle);
+});
 
 
-const button = document.getElementById("btn");
-const modal = document.getElementById("dialog");
-const buttonClose = document.getElementById("times");
-
-  // O botão Update abre uma Dialog
-  button.onclick = function() {
-    modal.showModal()
-     console.log(buttonClose)
-  } 
-
- // O botão cancelButtom fecha uma Dialog
-function closeModal() {
-    modal.close()
-  }
-
-*/
-
-
-
-btn.addEventListener('click', ()=> {
-  dialog.classList.toggle('animar');
-})
-
-times.addEventListener('click', ()=> {
-  dialog.classList.toggle(':not(.animar)');
-})

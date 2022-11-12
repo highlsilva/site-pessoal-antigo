@@ -17,7 +17,7 @@ body {
 }
 
 .hero {
-    height: 50rem;
+    height: 61rem;
     width: 100%;
     background-image: url(imagens.html/imagem4.png);
     background-size: cover;
@@ -30,9 +30,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
     padding-left: 3rem;
-    padding-right: 3rem
+    padding-right: 3rem;
+    width: 100%;
+    position: fixed;
+    background: rgb(25, 25, 25);
+    z-index: 200;
 }
 
 .nav-list {
@@ -49,7 +54,8 @@ nav {
 
 }
 
-.btn a {
+.btn a,
+li.btn {
     background-color: rgb(255, 0, 0);
     color: white;
     text-decoration: none;
@@ -62,7 +68,8 @@ nav {
 
 }
 
-.btn a:hover {
+.btn a:hover,
+li.btn:hover {
     background-color: transparent;
     border: 2px solid rgb(248, 20, 20);
     cursor: pointer;
@@ -88,13 +95,14 @@ nav {
 
 .logo {
     color: white;
-    font-size: 35px;
+    font-size: 46px;
     letter-spacing: 1px;
     cursor: pointer;
+    margin-right: 20rem;
 }
 
 .dialog-contate-me {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 100;
     background: #191919c2;
@@ -201,33 +209,39 @@ span {
 h1 {
     color: white;
     margin: 20px 0px 20px;
-    font-size: 75px;
+    font-size: 83px;
 }
 
 .text-bio {
     color: white;
-    font-size: 25px;
+    font-size: 27px;
     margin-bottom: 50px;
 }
 
 h4 {
     color: #fcfc;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 28px;
 }
 
 h5 {
     color: white;
     font-size: 23px;
     margin-bottom: 15px;
+    z-index: 10;
+    position: relative;
 }
 
 .pra p {
     color: #fcfc;
-    font-size: 16px;
-    line-height: 27px;
-    margin-bottom: 25px;
-
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: 14px;
+    margin-bottom: 29px;
+    z-index: 10;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 9px;
 }
 
 .newslatter form {
@@ -312,7 +326,7 @@ h5 {
     color: #fcfc;
     letter-spacing: 1px;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 45px;
 }
 
@@ -325,6 +339,7 @@ button {
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
+    margin-left: 8rem;
 }
 
 button:hover {
@@ -344,7 +359,7 @@ button:hover {
 
 .title h2 {
     color: white;
-    font-size: 75px;
+    font-size: 90px;
     margin: 30px auto;
     text-align: center;
 }
@@ -359,56 +374,55 @@ button:hover {
 }
 
 .card {
-    height: 365px;
-    width: 335px;
-    padding: 20px 35px;
+    position: relative;
+    height: 434px;
+    width: 422px;
+    z-index: 10;
     background: #191919;
     border-radius: 20px;
     margin: 15px;
-    position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-/* animation = habilidades
-
 .card::before {
-    content: "";
+    content: '';
     position: absolute;
-    width: 5rem;
-    height: 23rem;
-    left: 4.5rem;
-    top: 0;
-    background: rgb(252, 69, 3);
-    animation: 6s linear 0s infinite normal none running barra;
-    border-radius: 10px;
+    width: 150px;
+    height: 200%;
+    background: linear-gradient(rgb(34, 0, 255), red);
+    animation: animate 5s linear infinite;
+    top: -30%;
+    transform: translate(0, 50%);
+}
 
-    @keyframes animation { 
-        0%{
-            transform: rotate (0deg)
-        }
-        
-        100% {
-            transform: rotate (360deg)
-        }
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
     }
 }
+
 .card::after {
-    content: "";
+    content: '';
     position: absolute;
-    inset: 5px;
-    background: var(--border-color);
+    inset: 4px;
+    background: #191919;
     border-radius: 20px;
 }
-*/
-
 
 .card i {
     font-size: 25px;
     display: block;
     text-align: center;
-
+    margin-top: 1rem;
     color: rgb(248, 20, 20);
+    z-index: 10;
+    position: relative;
+
 }
 
 .card .button {
@@ -428,6 +442,290 @@ button:hover {
     cursor: pointer;
 }
 
+/* pagina projetos */
+
+.titleProjetos h2 {
+    color: white;
+    font-size: 75px;
+    margin: 30px auto;
+    text-align: center;
+    margin-top: -4rem;
+}
+.Card::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 200%;
+    background: linear-gradient(rgb(34, 0, 255), red);
+    animation: animate 5s linear infinite;
+    top: -30%;
+    transform: translate(0, 50%);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+.fVHdBB {
+    border-radius: 15px;
+    background: rgb(12, 11, 14);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding-bottom: 3rem;
+    max-width: 88%;
+}
+.Card {
+    position: relative;
+    height: 536px;
+    width: 542px;
+    z-index: 10;
+    background: rgb(25, 25, 25);
+    border-radius: 20px;
+    margin: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.Card::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #191919;
+    border-radius: 20px;
+}
+
+.Card i {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(248, 20, 20);
+    z-index: 10;
+    position: relative;
+
+}
+
+.Card .button {
+    background-color: rgb(248, 20, 20);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 2px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.Card .button:hover {
+    background-color: transparent;
+    border: 2px solid rgb(248, 20, 20);
+    cursor: pointer;
+}
+
+
+.box2 {display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-left: -126px;
+    margin-right: -116px;
+}
+
+H4 {
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+H5 {
+    color: white;
+    font-size: 27px;
+    margin-bottom: -5px;
+    z-index: 10;
+    position: relative;
+    margin-top: 3px;
+}
+
+.prt {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 16px 61px;
+    border-radius: 30px;
+    transition: .4s;
+    margin-top: 2rem;
+    font-size: 19px;
+    margin-left: 0;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+}
+
+.img-prt1{
+    z-index: 10;
+    position: relative;
+    width: 17rem;
+    height: 26.4rem;
+    margin-top: 7px;
+    margin-bottom: 0.8rem;
+    border-radius: 27px;
+}
+
+.Img-prt2 {
+    z-index: 10;
+    position: relative;
+    width: 30rem;
+    height: 26.9rem;
+    margin-top: 7px;
+    margin-bottom: 0.4rem;
+    border-radius: 11px;
+}
+
+.Img-prt3 {
+    z-index: 10;
+    position: relative;
+    width: 32rem;
+    height: 19.9rem;
+    margin-top: 48px;
+    margin-bottom: 4.4rem;
+    border-radius: 21px;
+}
+.breve {
+  
+    color: white;
+    font-size: 71px;
+    margin-bottom: 10rem;
+    z-index: 10;
+    position: relative;
+    margin-top: 12rem;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    
+   
+}
+/*
+.Dialog-contate-me {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    background: #191919c2;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 1rem);
+    height: 100vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.Dialog-contate-me>div {
+
+    position: relative;
+    width: min(50%, 18rem);
+    height: min(50%, 18rem);
+    border: solid 2px #007cff36;
+    height: 25rem;
+    width: 35rem;
+    background: rgb(25, 25, 25);
+    border-radius: 5%;
+}
+
+
+.Dialog-contate-me .Text-contact {
+    position: relative;
+}
+
+.Dialog-contate-me .Canais {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.Dialog-contate-me .Text-contact {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-top: 4rem;
+    margin-left: 7rem;
+}
+
+.Icone {
+    height: 60px;
+    width: 60px;
+    margin-top: 2rem;
+    margin-left: 5rem;
+
+}
+
+.Dialog-contate-me #Times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: fit-content;
+
+}
+
+#Times {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.A2 {
+    font-size: 2rem;
+}
+
+.Link {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    margin-right: 10rem;
+    color: rgb(255, 255, 255);
+}
+
+#Dialog.animar {
+    animation: Slide .3s forwards;
+    display: flex;
+}
+
+
+
+@keyframes Slide {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
+
+   /* menu hanburguer */
+
 nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -441,7 +739,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: 23px;
+    font-size: 27px;
     margin-bottom: 10px;
 
 }
@@ -451,22 +749,6 @@ nav ul li a:hover {
     color: rgb(248, 20, 20);
     transition: .4s;
 }
-
-/*
-     .btn { 
-         background-color:  rgb(248, 20, 20);
-         color: white;
-         text-decoration: none;
-         border: 2px solid transparent;
-         font-weight: bold;
-         padding: 10px 25px;
-         border-radius: 30px;
-         transition: transform .4s;
-        }
-
-        .btn:hover {
-            transform: scale(1.2);
-        }*/
 
 .content {
     position: absolute;
@@ -596,7 +878,126 @@ footer p:nth-child(2) {
     body {
         overflow-x: hidden;
     }
+/* projetos */
+.box2 {
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 627px;
+    margin: 0 auto;
+   
+}
 
+    .Card {
+       
+        position: relative;
+        height: 546px;
+        width: 40rem;
+        z-index: 10;
+        background: rgb(25, 25, 25);
+        border-radius: 20px;
+        margin: 15px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .img-prt1 {
+        z-index: 10;
+        position: relative;
+        width: 17rem;
+        height: 26.4rem;
+        margin-top: 7px;
+        margin-bottom: -9px;
+        border-radius: 27px;
+    }
+
+    .Img-prt2 {
+        z-index: 10;
+        position: relative;
+        width: 25.4rem;
+        height: 23.9rem;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        border-radius: 11px;
+    }
+
+    .Img-prt3 {
+        z-index: 10;
+        position: relative;
+        width: 34.4rem;
+        height: 19.9rem;
+        margin-top: 36px;
+        margin-bottom: 2.4rem;
+        border-radius: 21px;
+    }
+
+    .titleProjetos h2 {
+        color: white;
+        font-size: 93px;
+        margin: 68px auto;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .service {
+        background: #101010;
+        width: 63rem;
+        padding: 1rem;
+    }
+    .Card .button {
+        background-color: rgb(248, 20, 20);
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 9px 2px;
+        border-radius: 30px;
+        transition: .4s;
+        font-size: 17px;
+    }
+
+    .prt {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 0px 1px 0px 19px;
+        border-radius: 30px;
+        transition: .4s;
+        margin-top: 1rem;
+        font-size: 25px;
+        margin-left: 0;
+        margin-right: 0rem;
+        height: 3rem;
+        width: 21rem;
+    }
+
+    .fVHdBB {
+        border-radius: 15px;
+        background: rgb(12, 11, 14);
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-direction: column;
+        width: 45rem;
+        height: 100%;
+        padding-bottom: 3rem;
+        max-width: 100%;
+    }
+
+    H4 {
+        color: #fcfc;
+        letter-spacing: 2px;
+        font-size: 37px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+/* projetos termina aqui */
     .main {
         width: 1130px;
         max-width: 95%;
@@ -608,7 +1009,7 @@ footer p:nth-child(2) {
     }
 
     .content {
-        position: relative;
+
         margin-top: 18rem;
         margin-left: 11rem;
         margin-bottom: 20rem;
@@ -628,12 +1029,6 @@ footer p:nth-child(2) {
         height: auto;
         width: 63rem;
         position: relative;
-
-
-        /* width: 63rem;
-        padding: 17rem 0px;
-        background-color: #191919;*/
-
     }
 
     .about-text p {
@@ -703,7 +1098,7 @@ footer p:nth-child(2) {
     }
 
     .card {
-        height: 484px;
+        height: 523px;
         width: 510px;
         padding: 27px 33px;
         background: #191919;
@@ -752,33 +1147,62 @@ footer p:nth-child(2) {
         justify-content: center;
     }
 
-    /*
-    .nav-list {
-        position: absolute;
-        top: 10vh;
-        width: 15rem;
-        height: 85vh;
-        background: #191919b0;
-        margin-left: 45rem;
-        margin-right: 0px;
-        flex-direction: column;
+    nav {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-around;
-        transform: translateX(77rem);
-        transition: trasform 0.3s ease-in;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        width: 63rem;
+        position: fixed;
+        background: rgb(25, 25, 25);
+        z-index: 200;
     }
-       */
 
+    .dialog-contate-me {
+        position: fixed;
+        display: none;
+        z-index: 100;
+        background: #191919c2;
+        top: 0;
+        left: 0;
+        width: 63rem;
+        height: 222vh;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 
+    .dialog-contate-me>div {
+        position: relative;
+        width: min(50%, 18rem);
+        height: min(50%, 18rem);
+        border: solid 2px #007cff36;
+        height: 25rem;
+        width: 33rem;
+        background: rgb(25, 25, 25);
+        border-radius: 5%;
+    }
 
+    .dialog-contate-me #times {
+        position: absolute;
+        top: 1rem;
+        right: 12rem;
+        width: fit-content;
+    }
 
 }
-
 
 @media (max-width: 600px) {
     html {
         background: rgb(0, 0, 8);
         width: 63rem;
+        
     }
 
     body {
@@ -786,28 +1210,12 @@ footer p:nth-child(2) {
     }
 
     .content {
-        position: relative;
+
         margin-top: 18rem;
         margin-left: 11rem;
         margin-bottom: 20rem;
         transform: translateY(-50%);
     }
-
-    /* menu
-    .nav-list {
-        position: absolute;
-        top: 10vh;
-        right: 0%;
-        width: 50vw;
-        height: 90vh;
-        background: #191919b0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(77rem);
-        transition: trasform 0.3s ease-in;
-        
-    } */
 
     .nav-list {
         position: absolute;
